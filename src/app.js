@@ -5,6 +5,7 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast') 
 const request= require('request')
+const port = process.env.PORT || 3000
 
 
 
@@ -133,9 +134,9 @@ app.get('/products', (req,res)=>{
     })
 })
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
 
-    console.log('server is up on port 300!')
+    console.log(`server is up on port ${port}!`)
 })
 
 
